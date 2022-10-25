@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -6,27 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cockpit.component.scss']
 })
 export class CockpitComponent implements OnInit {
-
+  serverCreated= new EventEmitter<{serverContent: string, serverName: string}>();
+  bluePrintCreated=new EventEmitter<{serverContent: string, serverName: string}>();
   newServerName = '';
   newServerContent = '';
   constructor() { }
-
   ngOnInit(): void {
-  }
-  onAddServer() {
-    /*this.serverElements.push({
-      type: 'server',
-      name: this.newServerName,
-      content: this.newServerContent
-    });*/
-  }
-
-  onAddBlueprint() {
-    /*this.serverElements.push({
-      type: 'blueprint',
-      name: this.newServerName,
-      content: this.newServerContent
-    });*/
+    throw new Error('Method not implemented.');
   }
 
 }
